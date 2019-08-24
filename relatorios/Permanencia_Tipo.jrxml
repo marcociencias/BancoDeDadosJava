@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Permanencia_Tipo" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ae222278-3464-48e0-9aa3-fdb8323a0c62">
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select * from permanencia_asa]]>
+	</queryString>
+	<field name="id_permanencia" class="java.lang.Integer"/>
+	<field name="PERIODO_1_INI" class="java.lang.String"/>
+	<field name="PERIODO_1_FIM" class="java.lang.String"/>
+	<field name="PERIODO_2_INI" class="java.lang.String"/>
+	<field name="PERIODO_2_FIM" class="java.lang.String"/>
+	<field name="PERIODO_3_INI" class="java.lang.String"/>
+	<field name="PERIODO_3_FIM" class="java.lang.String"/>
+	<field name="PERIODO_4_INI" class="java.lang.String"/>
+	<field name="PERIODO_4_FIM" class="java.lang.String"/>
+	<field name="PERIODO_5_INI" class="java.lang.String"/>
+	<field name="PERIODO_5_FIM" class="java.lang.String"/>
+	<field name="PERIODO_6_INI" class="java.lang.String"/>
+	<field name="PERIODO_6_FIM" class="java.lang.String"/>
+	<field name="PERIODO_7_INI" class="java.lang.String"/>
+	<field name="PERIODO_7_FIM" class="java.lang.String"/>
+	<field name="PERIODO_8_INI" class="java.lang.String"/>
+	<field name="PERIODO_8_FIM" class="java.lang.String"/>
+	<field name="PERIODO_9_INI" class="java.lang.String"/>
+	<field name="PERIODO_9_FIM" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="164" height="126" uuid="e3faa587-b35e-411b-b553-d66a84c888d2"/>
+				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="270" y="0" width="263" height="62" uuid="b60b7814-6857-4440-8060-034d5226f82d"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="8af57cc7-6657-4cee-8a2b-2a8a70ea01ff"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee SubTitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="94" width="383" height="42" uuid="7977e764-6230-4c6e-b96c-5833e11a6d52"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor purus gravida arcu aliquam mattis. Donec et nulla libero, ut varius massa. Nulla sed turpis elit. Etiam aliquet mauris a ligula hendrerit in auctor leo lobortis.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="633" y="-73" width="219" height="209" uuid="a8bd3e5a-0bdc-41b6-955b-6bb046769e77"/>
+				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="ee0d692f-91eb-4f70-b40d-75e70a3f02f5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="42" height="15" forecolor="#736343" uuid="2821e562-d751-48cd-b404-f89342329ed2"/>
+				<text><![CDATA[id_permanencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="42" y="0" width="42" height="15" forecolor="#736343" uuid="e0a74c32-e41a-4dc3-8341-57aca8124099"/>
+				<text><![CDATA[PERIODO_1_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="84" y="0" width="42" height="15" forecolor="#736343" uuid="7ed84bca-dd9d-4b5f-b8e4-080908d7bce1"/>
+				<text><![CDATA[PERIODO_1_FIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="126" y="0" width="42" height="15" forecolor="#736343" uuid="3e48b56e-6b4f-4cec-9c35-11fb535983b5"/>
+				<text><![CDATA[PERIODO_2_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="168" y="0" width="42" height="15" forecolor="#736343" uuid="3fbb81f0-5ab7-421b-b628-4ed270e33e93"/>
+				<text><![CDATA[PERIODO_2_FIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="210" y="0" width="42" height="15" forecolor="#736343" uuid="48151105-c30c-4ce7-b929-07d23292c4a2"/>
+				<text><![CDATA[PERIODO_3_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="252" y="0" width="42" height="15" forecolor="#736343" uuid="cecb407c-bec9-4c39-890c-01e0a1c30f3a"/>
+				<text><![CDATA[PERIODO_3_FIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="294" y="0" width="42" height="15" forecolor="#736343" uuid="8df7aab6-2fbd-4105-92ce-46c7b07b4a93"/>
+				<text><![CDATA[PERIODO_4_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="336" y="0" width="42" height="15" forecolor="#736343" uuid="1be9bf8d-e266-4282-baf5-15430b40dac2"/>
+				<text><![CDATA[PERIODO_4_FIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="378" y="0" width="42" height="15" forecolor="#736343" uuid="050af79d-e315-4b59-ae82-07db4c0a3e8d"/>
+				<text><![CDATA[PERIODO_5_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="420" y="0" width="42" height="15" forecolor="#736343" uuid="6addc82f-2bcf-45f9-9f32-84aff71d43f9"/>
+				<text><![CDATA[PERIODO_5_FIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="462" y="0" width="42" height="15" forecolor="#736343" uuid="cc8270c6-6b1d-418c-96fc-1e3f3c7e509c"/>
+				<text><![CDATA[PERIODO_6_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="504" y="0" width="42" height="15" forecolor="#736343" uuid="2a206b66-430c-4f79-9f49-09fb6705268b"/>
+				<text><![CDATA[PERIODO_6_FIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="546" y="0" width="42" height="15" forecolor="#736343" uuid="49e8ef9a-3d7d-4407-a09a-d7100b93496c"/>
+				<text><![CDATA[PERIODO_7_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="588" y="0" width="42" height="15" forecolor="#736343" uuid="5b4ee531-58f8-479c-a5da-0cac9ba1ad6b"/>
+				<text><![CDATA[PERIODO_7_FIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="630" y="0" width="42" height="15" forecolor="#736343" uuid="0724b98f-6c34-48d1-b2e3-1a27d353dd2e"/>
+				<text><![CDATA[PERIODO_8_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="672" y="0" width="42" height="15" forecolor="#736343" uuid="6ba64151-a3de-446d-9302-588ce8628a9d"/>
+				<text><![CDATA[PERIODO_8_FIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="714" y="0" width="42" height="15" forecolor="#736343" uuid="2fa2057e-1a41-4fd5-89c0-24a7d94ee7c1"/>
+				<text><![CDATA[PERIODO_9_INI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="756" y="0" width="42" height="15" forecolor="#736343" uuid="fed65d32-2a71-4ccd-94de-7a455b9f4908"/>
+				<text><![CDATA[PERIODO_9_FIM]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="fe63c9b3-bf69-46d9-a555-d15cd69eb65d"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="42" height="15" uuid="52855abd-8f3f-4243-b1f8-6f7b8a83ae93"/>
+					<textFieldExpression><![CDATA[$F{id_permanencia}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="42" y="0" width="42" height="15" uuid="f3d0f385-ac03-424e-a535-d8e46feb1c0e"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_1_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="84" y="0" width="42" height="15" uuid="51b099d3-281a-49fa-b72f-ffd598b723e9"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_1_FIM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="126" y="0" width="42" height="15" uuid="a262b016-5f3c-40fc-88e7-71538aa543c0"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_2_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="168" y="0" width="42" height="15" uuid="eab165cb-20b0-4989-9e55-58ababf47013"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_2_FIM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="210" y="0" width="42" height="15" uuid="b5ef78fe-9d83-4e81-bc01-f85ea161eda5"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_3_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="252" y="0" width="42" height="15" uuid="94d2b3c6-212a-4424-920d-76c1691bc7f8"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_3_FIM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="294" y="0" width="42" height="15" uuid="51ac1051-32b4-43e1-a174-9052829e3c80"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_4_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="336" y="0" width="42" height="15" uuid="29dc5f5b-5e21-4c3d-b376-14f0bc268834"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_4_FIM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="378" y="0" width="42" height="15" uuid="794399fd-9d2c-4f81-95c9-2e48254d8c6b"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_5_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="420" y="0" width="42" height="15" uuid="a273cec3-0c23-471d-b8eb-c872f20acedd"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_5_FIM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="462" y="0" width="42" height="15" uuid="d9ad06a9-acec-4151-a7ee-d59052d48702"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_6_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="504" y="0" width="42" height="15" uuid="5154d4e0-e3ff-4c12-a6a7-dd2cec4f829d"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_6_FIM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="546" y="0" width="42" height="15" uuid="2d272a3f-ac5b-47d2-81ca-90485952bb4b"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_7_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="588" y="0" width="42" height="15" uuid="8fd15df1-3397-460d-840b-896ffa922105"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_7_FIM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="630" y="0" width="42" height="15" uuid="46aebe3a-624c-4b01-a7a7-a735ab724e38"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_8_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="672" y="0" width="42" height="15" uuid="9b604653-fff8-4476-a62b-3dba75729b56"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_8_FIM}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="714" y="0" width="42" height="15" uuid="6570d487-52ca-45fe-9026-eccee5fd8e53"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_9_INI}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="756" y="0" width="42" height="15" uuid="4b3dff0d-5fa2-4245-a163-559e60a49015"/>
+					<textFieldExpression><![CDATA[$F{PERIODO_9_FIM}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="3ba988e7-216b-4472-87f9-7c6c04d8d321"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="eb640885-269e-41a8-a5fb-d77cb71af779"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="9af026d7-dc3d-4174-acc0-6cdf62e9255c"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="05490473-b963-4153-aa84-8194209bb6ec"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="edbbb978-9e62-4b15-8bd7-9e11a8b97d06"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
